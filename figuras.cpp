@@ -74,4 +74,5 @@ int main(){
 // al terminal el valor de ambas areas.
 
    return 0;
+
 }
