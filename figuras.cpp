@@ -71,10 +71,8 @@ int main(){
    cout << "El area del triangulo rectagulo es de:" << triangulo_rectangulo.area() << endl;
    cout << "El area del rectangulo grande es de:" << rectangulo_grande.area() << endl;
    cout << "El perimetro del rectangulo grande es de:" << rectangulo_grande.perimetro() << endl;
-
-// Tarea: La funcion main tambien debe escribir al terminal si el area de 
-// triangulo_rectangulo es mayor al area de rectangulo_grande. Y escribir
-// al terminal el valor de ambas areas.
+   cout << "El area del triangulo_rectangulo es mayor al area de rectangulo_grande? " << (rectangulo_grande.area() > triangulo_rectangulo.area()) << endl;
+   cout << "PERDON Y GRACIAS POR TODO !!" << endl;
 
    return 0;
 
