@@ -43,6 +43,9 @@ public:
       return (altura_ * ancho_);
    }
 
+   int perimetro(){
+      return (2 * altura_) + (2 * ancho_);
+   }
 };
 
 class Triangulo : public Figura{
@@ -67,7 +70,7 @@ int main(){
    cout << "El alto del triangulo rectangulo es de:" << triangulo_rectangulo.mi_altura() << endl;
    cout << "El area del triangulo rectagulo es de:" << triangulo_rectangulo.area() << endl;
    cout << "El area del rectangulo grande es de:" << rectangulo_grande.area() << endl;
-
+   cout << "El perimetro del rectangulo grande es de:" << rectangulo_grande.perimetro() << endl;
 
 // Tarea: La funcion main tambien debe escribir al terminal si el area de 
 // triangulo_rectangulo es mayor al area de rectangulo_grande. Y escribir
