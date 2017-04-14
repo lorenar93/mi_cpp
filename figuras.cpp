@@ -16,7 +16,7 @@ public:
   }
 
   // Destructor, luego hablamos de eso, no le pongas cuidado por ahora (dejarlo)
-  virtual ~Figura();
+  virtual ~Figura(){}
 
   // Tarea: Crear metodos que me devuelvan los valores de altura y ancho
 
