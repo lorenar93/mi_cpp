@@ -71,7 +71,7 @@ int main(){
    cout << "El area del triangulo rectagulo es de: " << triangulo_rectangulo.area() << endl;
    cout << "El area del rectangulo grande es de: " << rectangulo_grande.area() << endl;
    cout << "El perimetro del rectangulo grande es de: " << rectangulo_grande.perimetro() << endl;
-   cout << "El area del rectangulo_grande es mayor al area del triangulo_rectangul ? " << (rectangulo_grande.area() > triangulo_rectangulo.area()) << endl;
+   cout << "El area del rectangulo grande es mayor al area del triangulo rectangulo ? " << (rectangulo_grande.area() > triangulo_rectangulo.area()) << endl;
 
    return 0;
 
