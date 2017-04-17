@@ -16,7 +16,7 @@ public:
    }
 
 // Destructor, luego hablamos de eso, no le pongas cuidado por ahora (dejarlo)
-   //virtual ~Figura(){}
+   virtual ~Figura(){}
 
   // Tarea: Crear metodos que me devuelvan los valores de altura y ancho
 
@@ -67,12 +67,11 @@ int main(){
    Rectangulo rectangulo_grande(4,5);
    Triangulo triangulo_rectangulo(4,5);
 
-   cout << "El alto del triangulo rectangulo es de:" << triangulo_rectangulo.mi_altura() << endl;
-   cout << "El area del triangulo rectagulo es de:" << triangulo_rectangulo.area() << endl;
-   cout << "El area del rectangulo grande es de:" << rectangulo_grande.area() << endl;
-   cout << "El perimetro del rectangulo grande es de:" << rectangulo_grande.perimetro() << endl;
-   cout << "El area del triangulo_rectangulo es mayor al area de rectangulo_grande? " << (rectangulo_grande.area() > triangulo_rectangulo.area()) << endl;
-   cout << "PERDON Y GRACIAS POR TODO !!" << endl;
+   cout << "El alto del triangulo rectangulo es de: " << triangulo_rectangulo.mi_altura() << endl;
+   cout << "El area del triangulo rectagulo es de: " << triangulo_rectangulo.area() << endl;
+   cout << "El area del rectangulo grande es de: " << rectangulo_grande.area() << endl;
+   cout << "El perimetro del rectangulo grande es de: " << rectangulo_grande.perimetro() << endl;
+   cout << "El area del rectangulo_grande es mayor al area del triangulo_rectangul ? " << (rectangulo_grande.area() > triangulo_rectangulo.area()) << endl;
 
    return 0;
 
