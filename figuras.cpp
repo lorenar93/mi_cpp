@@ -5,12 +5,12 @@ using namespace std;
 
 class Figura{
 protected:
-   int altura_;
-   int ancho_;
+   double altura_;
+   double ancho_;
 
 public:
 // Constructor 
-   Figura(int altura, int ancho){
+   Figura(double altura, double ancho){
       altura_ = altura;
       ancho_ = ancho;
    }
@@ -20,11 +20,11 @@ public:
 
   // Tarea: Crear metodos que me devuelvan los valores de altura y ancho
 
-   int mi_altura(){
+   double mi_altura(){
       return altura_;
    }
 
-   int mi_ancho(){
+   double mi_ancho(){
       return ancho_;
    }
 
@@ -32,40 +32,39 @@ public:
 
 class Rectangulo : public Figura{
 public:
-   Rectangulo(int altura, int ancho) : Figura (altura, ancho){
+   Rectangulo(double altura, double ancho) : Figura (altura, ancho){
       altura_ = altura;
       ancho_ = ancho;
    }
 
 // Metodos:
 
-   int area(){
+   double area(){
       return (altura_ * ancho_);
    }
 
-   int perimetro(){
+   double perimetro(){
       return (2 * altura_) + (2 * ancho_);
    }
 };
 
 class Triangulo : public Figura{
 public:
-   Triangulo(int altura, int ancho) : Figura (altura, ancho){
+   Triangulo(double altura, double ancho) : Figura (altura, ancho){
       altura_ = altura;
       ancho_ = ancho;
    }
 
 // Metodos:
 
-   int area(){
+   double area(){
       return (altura_ * ancho_) / 2;
    }
 };
-
 int main(){
 
-   Rectangulo rectangulo_grande(4,5);
-   Triangulo triangulo_rectangulo(4,5);
+   Rectangulo rectangulo_grande(4.5,5.5);
+   Triangulo triangulo_rectangulo(4.5,5.5);
 
    cout << "El alto del triangulo rectangulo es de: " << triangulo_rectangulo.mi_altura() << endl;
    cout << "El area del triangulo rectagulo es de: " << triangulo_rectangulo.area() << endl;
