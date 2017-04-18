@@ -29,7 +29,7 @@ public:
       return Precio_;
    }
 
-   string mi_Lineas(){
+   string mis_Lineas(){
       return Lineas_;
    }
 
@@ -116,15 +116,16 @@ int main(){
    Calzado Calzado_formal("amarrar", "formal", "Santa fe", 89900, "Calzado", 65, 5310);
    Calzado Calzado_casual("bota", "casual", "Santa fe", 69900, "Calzado", 90, 5015);
    Camiseta Polo("basica", "cuello v", "Fontanar", 51900, "Camsita Polo", 200, 3839);
-   Camiseta tshirt("estampada", "slim fit", "Fontanar", 45000, "Camiseta tshirt", 150, 3815);
-   Pantalones Jeans(801, "sport", "Galerias", 99000, "Jeans", 180, 1056);
+   Camiseta tshirt("estampada", "slim fit", "Galerias", 45000, "Camiseta tshirt", 150, 3815);
+   Pantalones Jeans(801, "sport", "fontanar", 99000, "Jeans", 180, 1056);
    Pantalones Formal(701, "formal", "Galerias", 112900, "Pantalon",120, 1045);
 
-   cout << "El tipo de Calzado que se vendio hoy fue: " << Calzado_formal.mi_Categoria() << endl;
+   cout << "El tipo de Calzado que se vendio hoy fue: " << Calzado_formal.mi_Categoria() << ", " <<Calzado_casual.mi_Categoria() << endl;
    cout << "El cuello de la Polo que se vendio es tipo: " << Polo.mi_Cuello() << endl;
    cout << "Donde se vendio el Calzado casual: " << Calzado_casual.mi_Plaza() << endl;
    cout << "Cual es el precio del pantalon Formal? " << Formal.mi_Precio() << endl;
    cout << "La referencia de la camiseta tshirt es: " << tshirt.mi_Referencia() << endl;
+   cout << "Cuales fueron las lineas que se vendieron en Galerias? " << Formal.mis_Lineas() <<", " << tshirt.mis_Lineas() << endl; 
 
    return 0;
 
