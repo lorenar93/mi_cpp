@@ -21,32 +21,32 @@ public:
 
 // Metodos:
 
-   string mi_Plaza(){
+   string mi_Plaza() const {
       return Plaza_;
    }
 
-   int mi_Precio(){
+   int mi_Precio() const {
       return Precio_;
    }
 
-   string mis_Lineas(){
+   string mis_Lineas() const {
       return Lineas_;
    }
 
-   int mis_Unidades(){
+   int mis_Unidades() const {
       return Unidades_;
    }
 
-   int mi_Referencia(){
+   int mi_Referencia() const {
       return Referencia_;
    }
 
    template<class T>
-   bool mas_costoso(T otro_producto){
+   bool mas_costoso(T const & otro_producto) const {
      return this->Precio_ > otro_producto.mi_Precio();
    }
 
-   bool mas_costoso(int otro_precio){
+   bool mas_costoso(int const otro_precio) const {
      return Precio_ > otro_precio;
    }
 
@@ -66,11 +66,11 @@ public:
 
 // Metodos:
 
-   string mi_Silueta(){
+   string mi_Silueta() const {
       return Silueta_;
    }
 
-   string mi_Cuello(){
+   string mi_Cuello() const {
       return Cuello_;
    }
 };
@@ -88,11 +88,11 @@ public:
 
 // Metodos:
 
-   string mi_Estilo(){
+   string mi_Estilo() const {
       return Estilo_;
    }
 
-   string mi_Categoria(){
+   string mi_Categoria() const {
       return Categoria_;
    }
 };
@@ -111,11 +111,11 @@ public:
 
 // Metodos:
 
-   int mi_Silueta(){
+   int mi_Silueta() const {
       return Silueta_;
    }
 
-   string mi_Categoria(){
+   string mi_Categoria() const {
       return Categoria_;
    }
 };
