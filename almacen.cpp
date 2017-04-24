@@ -41,6 +41,15 @@ public:
       return Referencia_;
    }
 
+   template<class T>
+   bool mas_costoso(T otro_producto){
+     return this->Precio_ > otro_producto.mi_Precio();
+   }
+
+   bool mas_costoso(int otro_precio){
+     return Precio_ > otro_precio;
+   }
+
 };
 
 class Camiseta : public Productos{
@@ -86,15 +95,6 @@ public:
    string mi_Categoria(){
       return Categoria_;
    }
-   
-   bool mas_costoso(Camiseta &otra_Camiseta){
-      return this -> Precio_ > otra_Camiseta.mi_Precio();
-   }
-
-   bool mas_costoso(int otro_Precio){
-      return this -> Precio_ > otro_Precio; 
-   }
-
 };
 
 class Pantalones : public Productos{
@@ -118,10 +118,6 @@ public:
    string mi_Categoria(){
       return Categoria_;
    }
-
-   bool mas_costoso(Camiseta &otra_Camiseta){
-      return this -> Precio_ > otra_Camiseta.mi_Precio();
-   }   
 };
 
 
@@ -140,10 +136,8 @@ int main(){
    cout << "Cual es el precio del pantalon Formal? " << Formal.mi_Precio() << endl;
    cout << "La referencia de la camiseta tshirt es: " << tshirt.mi_Referencia() << endl;
    cout << "Cuales fueron las lineas que se vendieron en Galerias? " << Formal.mis_Lineas() <<", " << tshirt.mis_Lineas() << endl; 
-   cout << "El precio del pantalon es mas costoso que la Camiseta? " << Jeans.mas_costoso(Polo) << endl;
-   cout << "El precio del calzado es mas costos que la camiseta? " << Calzado_formal.mas_costoso(Polo) << endl;
-   cout << "El precio del calzado es mas costos que la camiseta? " << Calzado_casual.mas_costoso(Polo.mi_Precio()) << endl;
-
+   cout << "El precio del calzado es mas costos que la camiseta? " << Calzado_formal.mas_costoso(Polo.mi_Precio()) << endl;
+   cout << "El precio del calzado es mas costos que la camiseta? " << Calzado_casual.mas_costoso<Camiseta>(Polo) << endl;
 
    return 0;
 
