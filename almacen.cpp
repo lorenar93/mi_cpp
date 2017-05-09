@@ -25,7 +25,7 @@ public:
       return Plaza_;
    }
 
-   int mi_Precio() const {
+   int & mi_Precio() {
       return Precio_;
    }
 
@@ -42,8 +42,15 @@ public:
    }
 
    template<class T>
-   bool mas_costoso(T const & otro_producto) const {
+   bool mas_costoso(T & otro_producto) const {
      return this->Precio_ > otro_producto.mi_Precio();
+   }
+
+   template<class T>
+   int & el_precio_mas_costoso(T & otro_producto) {
+      if (this -> Precio_ > otro_producto.mi_Precio())
+         return this -> Precio_;
+      return otro_producto.mi_Precio();
    }
 
    bool mas_costoso(int const otro_precio) const {
@@ -138,6 +145,10 @@ int main(){
    cout << "Cuales fueron las lineas que se vendieron en Galerias? " << Formal.mis_Lineas() <<", " << tshirt.mis_Lineas() << endl; 
    cout << "El precio del calzado es mas costos que la camiseta? " << Calzado_formal.mas_costoso(Polo.mi_Precio()) << endl;
    cout << "El precio del calzado es mas costos que la camiseta? " << Calzado_casual.mas_costoso<Camiseta>(Polo) << endl;
+   cout << "El precio del calzado formal es: ? " << Calzado_formal.mi_Precio() << endl;
+   cout << "Cual es el precio mas costoso del Calzado? " << Calzado_formal.el_precio_mas_costoso<Calzado>(Calzado_casual) << endl;
+   Calzado_formal.el_precio_mas_costoso<Calzado>(Calzado_casual) = 24; 
+   cout << "El precio del calzado formal es: ? " << Calzado_formal.mi_Precio() << endl;
 
    return 0;
 
